@@ -1,8 +1,20 @@
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    string phoneNumber;
+    getline(cin, phoneNumber);
+
+    auto areaCode = phoneNumber.substr(0, 3);
+    auto prefix = phoneNumber.substr(3, 3);
+    auto lineNumber = phoneNumber.substr(6);
+
+    cout << "(" << areaCode << ") " << prefix << "-" << lineNumber << endl;
+
+    return 0;
 }
 
 /*
